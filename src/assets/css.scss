@@ -1,0 +1,85 @@
+@function rem($px) {
+  @return $px / 46.875 + rem;
+};
+.header{
+    width: 100%;
+    background-color: rgba(7,17,27,.5);
+    .commodity-pictures{
+        float: left;
+        margin-top: rem(48);
+        margin-left: rem(48);
+        margin-bottom: rem(36);
+        width: rem(128);
+        height: rem(128);
+        border-radius: 4px;
+        background-color: navy;
+    }
+    .commodity-content{
+        float: left;
+        margin-left: rem(32);
+        margin-top: rem(48);
+        .name-commodity{
+            margin-top: rem(4);
+            box-sizing: border-box;
+            .commodity-header{
+                margin-top: rem(4);
+                img{
+                    height: rem(32);
+                }
+                .name{
+                    margin-left: rem(12);
+                    font-size: rem(32);
+                    color: rgb(255,255,255);
+                    font-weight: bold;
+                }
+            }
+            .commodity-center{
+                margin-top: rem(16);
+                font-size: rem(24);
+                color: #fff;
+                font-weight: 200;
+            }
+            .commodity-footer{
+                margin-top: rem(20);
+                span{
+                    font-size: rem(20);
+                    color: #fff;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+    .notice{
+        clear: both;
+        width: 100%;
+        padding-left: rem(24);
+        padding-right: rem(24);
+        box-sizing: border-box;
+        background-color: rgba(0,0,0,.2);
+        width: 100%;
+        height: rem(56);
+    }
+}
+.menu{
+    width: 100%;
+   .left{
+       float: left;
+       box-sizing: border-box;
+       width: rem(160);
+       .details{
+          padding-left: rem(24);
+          padding-right: rem(24);
+          box-sizing: border-box;
+           font-size: rem(24);
+           background-color: #f3f5f7;
+           color: rgb(240,20,20);
+           font-weight: 200;
+           width: 100%;
+           height: rem(108);
+           line-height: rem(108);
+       }
+   }
+   .right{
+       float: left;
+   }
+}
