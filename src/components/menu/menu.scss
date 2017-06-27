@@ -1,0 +1,23 @@
+.menu{
+    width: 100%;
+   .left{
+       float: left;
+       box-sizing: border-box;
+       width: rem(160);
+       .details{
+          padding-left: rem(24);
+          padding-right: rem(24);
+          box-sizing: border-box;
+           font-size: rem(24);
+           background-color: #f3f5f7;
+           color: rgb(240,20,20);
+           font-weight: 200;
+           width: 100%;
+           height: rem(108);
+           line-height: rem(108);
+       }
+   }
+   .right{
+       float: left;
+   }
+}

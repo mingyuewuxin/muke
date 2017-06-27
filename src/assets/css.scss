@@ -1,10 +1,29 @@
 @function rem($px) {
   @return $px / 46.875 + rem;
 };
+@mixin bgi($img,$img1) {
+  background-image: url($img);
+  @media (-webkit-min-device-pixel-ratio: 3) {
+    background-image: url($img1);
+  }
+};
 .header{
+    position: relative;
+    top: 0;
     width: 100%;
-    background-color: rgba(7,17,27,.5);
+    background-image: url(http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg);
+    background-size: cover;
+    .cover{
+        z-index: -1;
+            position: absolute;
+            top: 0;
+            background-color: rgba(7,17,27,.5);
+            filter: blur(10px);
+            width: 100%;
+            height: 100%;
+        }
     .commodity-pictures{
+        z-index: 100;
         float: left;
         margin-top: rem(48);
         margin-left: rem(48);
@@ -13,11 +32,15 @@
         height: rem(128);
         border-radius: 4px;
         background-color: navy;
+        img{
+            width: 100%;
+        }
     }
     .commodity-content{
         float: left;
         margin-left: rem(32);
         margin-top: rem(48);
+        width: 72.2%;
         .name-commodity{
             margin-top: rem(4);
             box-sizing: border-box;
@@ -40,8 +63,22 @@
                 font-weight: 200;
             }
             .commodity-footer{
-                margin-top: rem(20);
+                margin-bottom: rem(4);
+                padding-top: rem(20);
                 span{
+                    font-size: rem(20);
+                    color: #fff;
+                    font-weight: 200;
+                }
+                .evaluation{
+                    float: right;
+                    margin-right: rem(24);
+                    padding-left: rem(16);
+                    padding-right: rem(16);
+                    border-radius: rem(14);
+                    background-color: rgba(0,0,0,.2);
+                    height: rem(48);
+                    line-height: rem(48);
                     font-size: rem(20);
                     color: #fff;
                     font-weight: 200;
@@ -58,28 +95,153 @@
         background-color: rgba(0,0,0,.2);
         width: 100%;
         height: rem(56);
+        img{
+            display: inline;
+            vertical-align: middle;
+        }
+        p{
+            width: rem(620);
+            margin-left: rem(8);
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; 
+            font-size: rem(20);
+            color: #fff;
+            font-weight: 200;
+            line-height: rem(56);
+        }
     }
 }
-.menu{
+.presentation{
+    z-index: 101;
     width: 100%;
-   .left{
-       float: left;
-       box-sizing: border-box;
-       width: rem(160);
-       .details{
-          padding-left: rem(24);
-          padding-right: rem(24);
-          box-sizing: border-box;
-           font-size: rem(24);
-           background-color: #f3f5f7;
-           color: rgb(240,20,20);
-           font-weight: 200;
-           width: 100%;
-           height: rem(108);
-           line-height: rem(108);
-       }
-   }
-   .right{
-       float: left;
-   }
+    height: 100%;
+    position: fixed;
+    top: 0;
+    .presentation-native{
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(7,17,27,.8);
+        filter: blur(10px);
+        width: 100%;
+        height: 100%;
+    }
+    .presentation-header{
+        z-index: 100;
+        padding-top: rem(128);
+        text-align: center;
+        font-size: rem(32);
+        color: #fff;
+        font-weight: 700;
+        line-height: rem(32);
+    }
+    .star{
+        margin-top: rem(32);
+        div{
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    .privilege{
+      .rail{
+        padding-left: rem(72);
+        padding-right: rem(72);
+        margin-top: rem(56);
+        box-sizing: border-box;
+        hr{
+            display: inline-block;
+            width: rem(200);
+            background-color: rgba(255,255,255,.2);
+        }
+        span{
+            padding-left: rem(24);
+            padding-right: rem(24);
+            color: #fff;
+            font-size: rem(30);
+        }
+    }
+    .privilege-content{
+            width: 100%;
+            padding-left: rem(96);
+            padding-right: rem(96);
+            margin-top: rem(48);
+            box-sizing: border-box;
+            ul{
+                li{
+                    height: rem(32);
+                    margin-bottom: rem(24);
+                    span{
+                        margin-left: rem(12);
+                        font-size: rem(24);
+                        color: #fff;
+                        font-weight: 200;
+                        line-height: rem(24);
+                    }
+                }
+            }
+        }
+    }
+    .merchants{
+      .rail{
+        padding-left: rem(72);
+        padding-right: rem(72);
+        margin-top: rem(56);
+        box-sizing: border-box;
+        hr{
+            display: inline-block;
+            width: rem(200);
+            background-color: rgba(255,255,255,.2);
+        }
+        span{
+            padding-left: rem(24);
+            padding-right: rem(24);
+            color: #fff;
+            font-size: rem(30);
+        }
+    }
+    .merchants-content{
+            width: 100%;
+            padding-left: rem(96);
+            padding-right: rem(96);
+            margin-top: rem(48);
+            box-sizing: border-box;
+            font-size: rem(24);
+            font-weight: 200;
+            color: #fff;
+            line-height: rem(48);
+        }
+    }
+    .shut-down{
+        position: absolute;
+        bottom: rem(64);
+        width: 100%;
+        text-align: center;
+        font-size: rem(64);
+        color: #fff;
+    }
+}
+
+.fixed{
+    position: relative;
+    top: 0;
+    width: 100%;
+    .routers{
+        width: 100%;
+        height: rem(80);
+        border-bottom:1px solid rgba(7,17,27,.1);
+        div{
+            float: left;
+            text-align: center;
+            width: (100/3)+%;
+            height: 100%;
+            line-height: rem(80);
+            color: rgb(75,85,93);
+            font-size: rem(28);
+        }
+    }
 }
