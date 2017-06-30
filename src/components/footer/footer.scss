@@ -1,0 +1,83 @@
+.footer{
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    width: 100%;
+    background-color: #141d27;
+    box-sizing: content-box;
+    .buy{
+        display: inline-block;
+        padding-top: rem(24);
+        padding-bottom: rem(24);
+        padding-right: rem(24);
+        margin-left: rem(150);
+        font-size: rem(32);
+        color: rgba(255,255,255,.4);
+        font-weight: 700;
+        line-height: rem(48);
+    }
+    .freight{
+        display: inline-block;
+        padding-left: rem(24);
+        border-left: 2px solid rgba(255,255,255,.1);
+        font-size: rem(32);
+        color: rgba(255,255,255,.4);
+//      font-weight: 700;
+        line-height: rem(48);
+    }
+    .end{
+        float: right;
+        padding-top: rem(24);
+        padding-bottom: rem(24);
+        width: rem(210);
+        text-align: center;
+        font-size: rem(24);
+        color: rgba(255,255,255,.4);
+        font-weight: 700;
+        line-height: rem(48);
+    }
+}
+    .circle{
+        margin-left: rem(36);
+        box-sizing: content-box;
+        position: fixed;
+        bottom: 0;
+        z-index: 1000;
+        border-radius: 50%;
+        width: rem(116);
+        height: rem(116);
+        background-color: #141d27;
+        text-align: center;
+        line-height: rem(116);
+        color: white;
+        .native{
+            border-radius: 50%;
+            margin-left: rem(14);
+            margin-top: rem(12);
+            width: rem(88);
+            height: rem(88);
+            font-size: rem(48);
+            line-height: rem(88);
+            
+        }
+        .counts{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: rem(48);
+            background-color: rgb(240,20,20);
+            box-shadow: 0px 4px 8px 0px rgba(0,0,0,.4);
+            border-radius: rem(12);
+            text-align: center;
+            font-size: rem(18);
+            font-weight: 700;
+            color: #Fff;
+            line-height: rem(32);
+        }
+    }
+   .blue{
+       background-color: rgb(0,160,220);
+   }
+   .black{
+       background-color: #2B333B;
+   }

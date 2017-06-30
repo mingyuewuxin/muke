@@ -1,23 +1,142 @@
+//body{
+//  overflow: hidden;
+//}
 .menu{
     width: 100%;
+    height: rem(900);
+    position: relative;
+    overflow: hidden;
    .left{
        float: left;
        box-sizing: border-box;
+       padding-bottom: rem(116);
        width: rem(160);
+       height: 100%;
+       position: relative;
+       overflow: auto;
+       overflow-x: hidden;
        .details{
           padding-left: rem(24);
           padding-right: rem(24);
           box-sizing: border-box;
            font-size: rem(24);
-           background-color: #f3f5f7;
-           color: rgb(240,20,20);
+//         background-color: #f3f5f7;
+           color: rgb(0,0,0);
            font-weight: 200;
            width: 100%;
            height: rem(108);
-           line-height: rem(108);
+//         line-height: rem(108);
+            line-height: rem(24);
+            text-align: center;
        }
    }
    .right{
        float: left;
+       width: rem(590);
+       position: relative;
+       overflow: auto;
+       height: 90%;
+       .classify{
+           width: 100%;
+           .classify-header{
+               padding-left: rem(34);
+               box-sizing: border-box;
+               width: 100%;
+               height: rem(52);
+               font-size: rem(24);
+               color: rgb(147,153,159);
+               line-height: rem(52);
+               border-left: 2px solid #d9dde1;
+           }
+           .classify-content{
+                padding-top: rem(36);
+                padding-bottom: rem(36);
+               padding-left: rem(36);
+               box-sizing: border-box;
+               .image{
+                   float: left;
+                   width: rem(128);
+//                 height: rem(128);
+                   img{
+                       width: 100%;
+                   }
+               }
+               .content{
+                   float: left;
+                   width: rem(400);
+                   padding-top: rem(4);
+                   padding-left: rem(20);
+                   .title{
+                       font-size: rem(28);
+                       color: rgb(7,17,27);
+                       line-height: rem(28);
+                   }
+                   .type{
+                       margin-top: rem(16);
+                       margin-bottom: rem(16);
+                       font-size: rem(20);
+                       color: rgb(147,153,159);
+                   }
+                   .evaluation{
+                       width: 100%;
+                       .left-content,.right-content{
+                           float: left;
+                           font-size: rem(20);
+                        color: rgb(147,153,159);                           
+                       }
+                       .left-content{
+                           margin-right:rem(24) ;
+                       }
+                       .clean{
+                           clear: both;
+                       }
+                   }
+                   .selling-price{
+                       width: 100%;
+                       .price{
+                           float: left;
+                           .ruling-price{
+                               float: left;
+                               margin-right: rem(16);
+                               font-size: rem(28);
+                               color: red;
+                               font-weight: 700;
+                               line-height: rem(44);
+                           }
+                           .original-price{
+                               float: left;
+                               font-size: rem(20);
+                               color: red;
+                               line-height: rem(48);
+                           }
+                       }
+                       .purchase{
+                           float: right;
+                           .add{
+                               margin: rem(36);
+                               border-radius: 50%;
+                               width: rem(40);
+                               height: rem(40);
+                               text-align: center;
+                               line-height: rem(40);
+                               background-color: deepskyblue;
+                           }
+                       }
+                   }
+               }
+               .clean{
+                   clear: both;
+               }
+           }
+       }
    }
+   .clean{
+       clear: both;
+   }
+}
+.white{
+    background-color: #fff;
+}
+.jump{
+    background-color: #f3f5f7;
 }

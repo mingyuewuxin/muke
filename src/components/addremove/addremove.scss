@@ -1,0 +1,15 @@
+.addremove{
+    float: right;
+    padding-right: rem(36);
+    height: 100%;
+    &>div{
+        display: inline-block;
+    }
+    span{
+        display: inline-block;
+        width: rem(48);
+        height: 100%;
+        text-align: center;
+        line-height: rem(48);
+    }
+}

@@ -10,7 +10,9 @@
 	  	<span class="clean"></span>
 	  </div>
 		</div>
-		<router-view :obj="obj"></router-view>
+		<router-view :obj="obj" @arr='arrs' :counts='count'></router-view>
+		  <v-shopcar v-if='flag1' @carshow='carif' :arr='arr' @remove='removes'></v-shopcar>
+      <v-footer @carshow='carif' :arr='arr'></v-footer>
   </div>
 </template>
 
@@ -18,23 +20,45 @@
 import axios from 'axios'
 import header from './components/header/header.vue'
 import presentation from './components/presentation/presentation.vue'
+import footer from './components/footer/footer.vue'
+import shopcar from './components/shopcar/shopcar.vue'
 
 export default {
   name: 'app',
   components: {
     'v-header': header,
+    'v-footer': footer,
+    'v-shopcar': shopcar,
     'v-presentation': presentation
   },
   data () {
     return {
       flag: false,
       aaa: {},
-      obj: {}
+      obj: {},
+      flag1: false,
+      price: 0,
+      count: 0
     }
   },
   methods: {
     getThisChlid () {
       this.flag = !this.flag
+    },
+    arrs (val) {
+      console.log(this.obj)
+    },
+    carif () {
+      this.flag1 = !this.flag1
+    },
+    removes (val) {
+      for (let j in this.obj.data) {
+        for (let k in this.obj.data[j].foods) {
+          if (this.obj.data[j].foods[k].count > 0) {
+            this.obj.data[j].foods[k].count = 0
+          }
+        }
+      }
     }
   },
   created () {
@@ -58,6 +82,19 @@ export default {
       console.log(err)
       return 2
     })
+  },
+  computed: {
+    arr () {
+      let data = []
+      for (let j in this.obj.data) {
+        for (let k in this.obj.data[j].foods) {
+          if (this.obj.data[j].foods[k].count > 0) {
+            data.push(this.obj.data[j].foods[k])
+          }
+        }
+      }
+      return data
+    }
   }
 }
 </script>

@@ -45,7 +45,6 @@
 export default {
   methods: {
     Cli () {
-      console.log(this.aaa)
       this.$emit('this-is-cli', '111')
     }
   },
